@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Acme Framework Core
+Bundle-SymbolicName: com.acme.framework.core
+Bundle-Version: 1.0.0
+Bundle-Vendor: Acme
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: com.google.common;bundle-version="17.0.0",
+ org.junit4;bundle-version="4.10.0";resolution:=optional
+Export-Package: com.acme.framework.core,
+ com.acme.framework.core.helper,
+ com.acme.framework.core.test

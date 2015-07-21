@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Acme Framework Services
+Bundle-SymbolicName: com.acme.framework.services
+Bundle-Version: 1.0.0
+Bundle-Vendor: Acme
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: com.acme.api.services;bundle-version="1.0.0",
+ com.acme.framework.core;bundle-version="1.0.0",
+ com.google.common;bundle-version="17.0.0",
+ com.fasterxml.jackson.core.jackson-databind,
+ com.fasterxml.jackson.core.jackson-core;bundle-version="2.3.3",
+ org.junit4;bundle-version="4.10.0";resolution:=optional
+Export-Package: com.acme.framework.services,
+ com.acme.framework.services.call,
+ com.acme.framework.services.helper,
+ com.acme.framework.services.test

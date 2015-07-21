@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/com.acme.feature_1.0.0.201507202240.jar" id="com.acme.feature" version="1.0.0.201507202240">
+      <category name="com.acme"/>
+   </feature>
+   <category-def name="com.acme" label="Acme"/>
+</site>

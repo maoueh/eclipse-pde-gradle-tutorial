@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Acme Framework Services
 Bundle-SymbolicName: com.acme.framework.services
-Bundle-Version: 1.0.0
+Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: Acme
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Require-Bundle: com.acme.api.services;bundle-version="1.0.0",

@@ -24,5 +24,7 @@ step and what documents to read.
 
 ## Tutorial
 
+## Tutorial
+
  * [Initial state](../master/tutorial/initial_state.md) (branch [master](../../tree/master))
  * [Gradlelized](../gradlelized/tutorial/gradlelizing.md) (branch [gradlelized](../../tree/gradlelized))

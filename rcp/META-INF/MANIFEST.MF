@@ -7,6 +7,6 @@ Bundle-Activator: com.acme.rcp.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  com.acme.plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-ActivationPolicy: lazy
 Export-Package: com.acme.rcp

@@ -4,7 +4,7 @@ Bundle-Name: Acme API Services
 Bundle-SymbolicName: com.acme.api.services
 Bundle-Version: 1.0.0
 Bundle-Vendor: Acme
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Require-Bundle: com.google.common;bundle-version="17.0.0",
  com.fasterxml.jackson.core.jackson-annotations;bundle-version="2.1.2",
  com.fasterxml.jackson.core.jackson-core;bundle-version="2.1.2",

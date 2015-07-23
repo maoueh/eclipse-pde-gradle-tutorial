@@ -5,7 +5,7 @@ Bundle-SymbolicName: com.google.common
 Bundle-Version: 17.0.0
 Bundle-ClassPath: lib/guava-17.0.0.jar
 Bundle-Vendor: Google
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Export-Package: com.google.common.annotations,
  com.google.common.base;version="17.0.0",
  com.google.common.base.internal;version="17.0.0",

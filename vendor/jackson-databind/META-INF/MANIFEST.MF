@@ -46,7 +46,7 @@ Include-Resource: {com/fasterxml/jackson/databind/cfg/VERSION.txt=src/
 Specification-Version: 2.3.3
 Archiver-Version: Plexus Archiver
 Bundle-ClassPath: lib/jackson-databind-2.3.3.jar
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Eclipse-BuddyPolicy: registered
 Require-Bundle: com.fasterxml.jackson.core.jackson-core;bundle-version="2.3.3",
  com.fasterxml.jackson.core.jackson-annotations;bundle-version="2.3.3"

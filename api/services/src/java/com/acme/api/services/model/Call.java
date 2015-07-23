@@ -4,7 +4,6 @@ import java.util.*;
 
 import com.acme.api.services.json.*;
 import com.fasterxml.jackson.core.*;
-import com.google.common.base.*;
 
 public class Call {
 
@@ -30,23 +29,16 @@ public class Call {
 
     @Override
     public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        long temp;
-        temp = Double.doubleToLongBits(mDuration);
-        result = prime * result + (int) (temp ^ (temp >>> 32));
-        result = prime * result + ((mId == null) ? 0 : mId.hashCode());
-        return result;
+        return Objects.hash(mId, mDuration);
     }
 
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
-        if (obj == null) return false;
-        if (getClass() != obj.getClass()) return false;
-        Call other = (Call) obj;
+        if (obj == null || getClass() != obj.getClass()) return false;
 
-        return Objects.equal(mId, other.mId) && Objects.equal(mDuration, other.mDuration);
+        Call other = (Call) obj;
+        return Objects.equals(mId, other.mId) && Objects.equals(mDuration, other.mDuration);
     }
 
     public String toJson() throws JsonProcessingException {

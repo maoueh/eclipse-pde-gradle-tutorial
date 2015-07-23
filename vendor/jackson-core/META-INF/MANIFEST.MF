@@ -35,4 +35,4 @@ Include-Resource: {com/fasterxml/jackson/core/json/VERSION.txt=src/mai
 Specification-Version: 2.3.3
 Archiver-Version: Plexus Archiver
 Bundle-ClassPath: lib/jackson-core-2.3.3.jar
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

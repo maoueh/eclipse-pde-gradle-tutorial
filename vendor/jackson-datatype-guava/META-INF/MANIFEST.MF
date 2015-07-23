@@ -62,7 +62,7 @@ Export-Package: com.fasterxml.jackson.datatype.guava;version="2.3.3";
    com.fasterxml.jackson.databind.ser.std"
 Tool: Bnd-1.50.0
 Bundle-ClassPath: lib/jackson-datatype-guava-2.3.3.jar
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Require-Bundle: com.fasterxml.jackson.core.jackson-databind;bundle-version="2.3.3",
  com.fasterxml.jackson.core.jackson-core;bundle-version="2.3.3",
  com.fasterxml.jackson.core.jackson-annotations;bundle-version="2.3.3",

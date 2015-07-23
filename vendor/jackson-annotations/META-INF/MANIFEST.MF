@@ -26,4 +26,4 @@ Bundle-DocURL: http://wiki.fasterxml.com/JacksonHome
 Specification-Version: 2.3.3
 Archiver-Version: Plexus Archiver
 Bundle-ClassPath: lib/jackson-annotations-2.3.3.jar
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

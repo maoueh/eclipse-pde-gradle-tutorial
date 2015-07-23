@@ -1,0 +1,13 @@
+
+description = 'Acme Framework Core'
+version = '1.0.0.dev1'
+group = 'com.acme.framework'
+
+javaProject()
+
+dependencies {
+    compile project(':api-services')
+    compile 'com.google.guava:guava:17.0'
+
+    testCompile 'junit:junit:4.10'
+}

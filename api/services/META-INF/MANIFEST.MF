@@ -11,8 +11,5 @@ Require-Bundle: com.google.common;bundle-version="17.0.0",
  com.fasterxml.jackson.core.jackson-databind;bundle-version="2.1.2",
  com.fasterxml.jackson.datatype.jackson-datatype-guava;bundle-version="2.1.2",
  org.junit4;bundle-version="4.10.0";resolution:=optional
-Export-Package: com.acme.api.services,
- com.acme.api.services.json,
- com.acme.api.services.model,
- com.acme.api.services.test.json,
- com.acme.api.services.test.model
+Export-Package: com.acme.api.services.json,
+ com.acme.api.services.model

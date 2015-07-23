@@ -1,0 +1,14 @@
+
+description = 'Acme API Services'
+version = '1.0.0.dev1'
+group = 'com.acme.api'
+
+javaProject()
+
+dependencies {
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.3.3'
+    compile 'com.fasterxml.jackson.datatype:jackson-datatype-guava:2.3.3'
+    compile 'com.google.guava:guava:17.0'
+
+    testCompile 'junit:junit:4.10'
+}

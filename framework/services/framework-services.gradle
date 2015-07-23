@@ -1,0 +1,15 @@
+
+description = 'Acme Framework Services'
+version = '1.0.0.dev1'
+group = 'com.acme.framework'
+
+javaProject()
+
+dependencies {
+    compile project(':api-services')
+    compile project(':framework-core')
+    compile 'com.fasterxml.jackson.core:jackson-core:2.3.3'
+    compile 'com.google.guava:guava:17.0'
+
+    testCompile 'junit:junit:4.10'
+}

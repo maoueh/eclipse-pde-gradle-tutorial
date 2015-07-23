@@ -7,6 +7,4 @@ Bundle-Vendor: Acme
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Require-Bundle: com.google.common;bundle-version="17.0.0",
  org.junit4;bundle-version="4.10.0";resolution:=optional
-Export-Package: com.acme.framework.core,
- com.acme.framework.core.helper,
- com.acme.framework.core.test
+Export-Package: com.acme.framework.core.helper

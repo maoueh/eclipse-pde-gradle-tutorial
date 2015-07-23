@@ -1,0 +1,12 @@
+subprojects.each { project ->
+  project.ext.javaProject = {
+    project.with {
+      apply plugin: 'eclipse'
+      apply plugin: 'java'
+
+      repositories {
+        mavenCentral()
+      }
+    }
+  }
+}

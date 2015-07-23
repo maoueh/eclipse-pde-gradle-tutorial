@@ -1,0 +1,15 @@
+
+rootProject.name = 'acme'
+
+gradle.ext.projects = [
+  'api-services' : file('api/services'),
+  'framework-core' : file('framework/core'),
+  'framework-services' : file('framework/services'),
+]
+
+include gradle.ext.projects.keySet() as String[]
+
+rootProject.children.each { project ->
+  project.projectDir = gradle.ext.projects[project.name]
+  project.buildFileName = "${project.name}.gradle"
+}

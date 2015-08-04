@@ -24,7 +24,16 @@ step and what documents to read.
 
 ## Tutorial
 
-## Tutorial
-
  * [Initial state](../master/tutorial/initial_state.md) (branch [master](../../tree/master))
+
+   The initial state the project. Good background about project in general.
+
  * [Gradlelized](../gradlelized/tutorial/gradlelizing.md) (branch [gradlelized](../../tree/gradlelized))
+
+   Initial transformation of project not depending to use a Gradle build.
+
+ * [Single Vendors Project](../gradlelized/tutorial/single-vendor.md) (branch [single-vendor](../../tree/single-vendor))
+
+   An attempt at reducing vendors projects merging 6 projects together into a single
+   one. Still no Eclipse Gradlelized build but good in-between steps to remove
+   some unneeded projects.

@@ -5,6 +5,5 @@ Bundle-SymbolicName: com.acme.framework.core
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: Acme
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
-Require-Bundle: com.google.common;bundle-version="17.0.0",
- org.junit4;bundle-version="4.10.0";resolution:=optional
+Require-Bundle: com.acme.vendors;bundle-version="1.0.0"
 Export-Package: com.acme.framework.core.helper

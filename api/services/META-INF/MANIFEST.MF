@@ -5,11 +5,6 @@ Bundle-SymbolicName: com.acme.api.services
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: Acme
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
-Require-Bundle: com.google.common;bundle-version="17.0.0",
- com.fasterxml.jackson.core.jackson-annotations;bundle-version="2.1.2",
- com.fasterxml.jackson.core.jackson-core;bundle-version="2.1.2",
- com.fasterxml.jackson.core.jackson-databind;bundle-version="2.1.2",
- com.fasterxml.jackson.datatype.jackson-datatype-guava;bundle-version="2.1.2",
- org.junit4;bundle-version="4.10.0";resolution:=optional
+Require-Bundle: com.acme.vendors;bundle-version="1.0.0"
 Export-Package: com.acme.api.services.json,
  com.acme.api.services.model

@@ -1,0 +1,85 @@
+
+description = 'Acme Vendors'
+version = '1.0.0'
+group = 'com.acme'
+
+javaProject()
+
+configurations {
+    vendors {
+        transitive = true
+    }
+}
+
+dependencies {
+    def projects = [
+        ':api-services',
+        ':framework-core',
+        ':framework-services'
+    ]
+
+    projects.each { path ->
+        ['runtime', 'testRuntime'].each { configuration ->
+          vendors project(path: path, configuration: configuration)
+        }
+    }
+}
+
+def findBinaryArtifact = { moduleComponent, resolvedArtifacts ->
+  resolvedArtifacts.find {
+    it.moduleVersion.id.equals(moduleComponent.moduleVersion)
+  }.getFile()
+}
+
+def findSourceArtifact = { moduleComponent, resolvedSourceComponents ->
+    def resolvedSourceComponent = resolvedSourceComponents.find {
+      it.id.equals(moduleComponent.id)
+    }
+
+    if (resolvedSourceComponent == null) return null
+
+    def sourcesArtifacts = resolvedSourceComponent.getArtifacts(SourcesArtifact)
+    sourcesArtifacts.isEmpty() ? null : sourcesArtifacts[0].getFile()
+}
+
+def querySourceComponents = { moduleComponents ->
+  dependencies.createArtifactResolutionQuery()
+              .forComponents(moduleComponents*.id)
+              .withArtifacts(JvmLibrary, SourcesArtifact)
+              .execute()
+              .resolvedComponents
+}
+
+def collectModuleComponents = {
+  def dependencies = configurations.vendors.incoming.resolutionResult.allDependencies
+  def moduleDependencies = dependencies.findAll {
+    it instanceof ResolvedDependencyResult && it.requested instanceof ModuleComponentSelector
+  }
+
+  moduleDependencies*.selected.toSet()
+}
+
+def collectArtifacts = {
+    def moduleComponents = collectModuleComponents()
+    def resolvedBinaryArtifacts = configurations.vendors.resolvedConfiguration.resolvedArtifacts
+    def resolvedSourceComponents = querySourceComponents(moduleComponents)
+
+    moduleComponents.collectEntries { moduleComponent ->
+      def binaryArtifact = findBinaryArtifact(moduleComponent, resolvedBinaryArtifacts)
+      def sourceArtifact = findSourceArtifact(moduleComponent, resolvedSourceComponents)
+
+      [(moduleComponent.id): [binaryArtifact, sourceArtifact]]
+    }
+}
+
+task copyBinaryArtifacts(type: Copy) {
+    from(collectArtifacts().values()*.get(0))
+    into('lib')
+}
+
+task copySourceArtifacts(type: Copy) {
+    from(collectArtifacts().values()*.get(1))
+    into('lib')
+}
+
+task copyArtifacts(dependsOn: ['copyBinaryArtifacts', 'copySourceArtifacts'])

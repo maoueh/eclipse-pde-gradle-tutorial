@@ -5,6 +5,7 @@ gradle.ext.projects = [
   'api-services' : file('api/services'),
   'framework-core' : file('framework/core'),
   'framework-services' : file('framework/services'),
+  'vendors' : file('vendors'),
 ]
 
 include gradle.ext.projects.keySet() as String[]
